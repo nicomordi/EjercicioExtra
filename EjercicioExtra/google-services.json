@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "950838372375",
+    "firebase_url": "https://starwars-1bbdf.firebaseio.com",
+    "project_id": "starwars-1bbdf",
+    "storage_bucket": "starwars-1bbdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950838372375:android:0b4beec5bdb82860",
+        "android_client_info": {
+          "package_name": "com.example.nicolas.ejercicioextra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950838372375-0p37ba32rmmoclbcijqftfbao6k9ounu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nicolas.ejercicioextra",
+            "certificate_hash": "216e01c4442172750330cd829c026a4c2caa2250"
+          }
+        },
+        {
+          "client_id": "950838372375-g30dtrsk740n5f0hc0q7gglcta5559f2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX4ZVuwAapvIzPAyc_s9Wcc5c7r_u7PHQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950838372375-g30dtrsk740n5f0hc0q7gglcta5559f2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
