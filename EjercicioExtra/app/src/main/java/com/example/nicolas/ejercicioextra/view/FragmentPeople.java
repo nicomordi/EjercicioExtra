@@ -71,13 +71,13 @@ public class FragmentPeople extends Fragment implements AdapterPeople.ListenerAd
 
     public void getUnPeople(){
         PeopleController peopleController = new PeopleController();
-        peopleController.getPeople(new ResultListener <PeopleContainer>() {
+        peopleController.getPeople(new ResultListener <List<People>>() {
 
 
             @Override
-            public void finish(PeopleContainer result) {
+            public void finish(List<People> result) {
 
-                for(People people: result.getAllPeople())
+                for(People people: result)
 
                 adapterPeople.agregarPeople(people);
             }

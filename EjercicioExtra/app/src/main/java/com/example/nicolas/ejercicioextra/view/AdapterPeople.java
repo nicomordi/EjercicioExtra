@@ -97,7 +97,7 @@ public class AdapterPeople  extends RecyclerView.Adapter<AdapterPeople.PeopleVie
         public void bindPeople(People people) {
 //
             nombrePeople.setText(people.getName());
-            homeworldPeople.setText(people.getHomeworld());
+            homeworldPeople.setText(people.getHomeWorldUrl());
 
         }
 
