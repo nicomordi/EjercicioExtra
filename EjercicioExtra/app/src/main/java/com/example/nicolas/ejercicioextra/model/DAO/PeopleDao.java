@@ -23,7 +23,8 @@ public class PeopleDao extends PeopleRetrofit {
 
     public void getUnPeople(final ResultListener<PeopleContainer> listenerController) {
 
-        Call<PeopleContainer> call = peopleService.getUnPeople(1); //request para un articulo
+
+        Call<PeopleContainer> call = peopleService.getUnPeople(9); //request para un articulo
 
         call.enqueue(new Callback<PeopleContainer>() { //se pone en lista la request.
             @Override

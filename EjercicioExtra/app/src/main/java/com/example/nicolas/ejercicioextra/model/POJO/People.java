@@ -45,10 +45,12 @@ public class People implements Serializable {
     private List<String> vehiclesUrls;
 
     public String getHomeWorldUrl() {
-        return homeWorldUrl;
+        return Planet.class.getName();
     }
 
     public String getName() {
         return name;
     }
+
+
 }

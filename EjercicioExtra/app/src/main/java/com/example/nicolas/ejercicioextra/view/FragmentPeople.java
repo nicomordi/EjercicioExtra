@@ -12,9 +12,11 @@ import android.view.ViewGroup;
 
 import com.example.nicolas.ejercicioextra.R;
 import com.example.nicolas.ejercicioextra.controller.PeopleController;
+import com.example.nicolas.ejercicioextra.controller.PlanetsController;
 import com.example.nicolas.ejercicioextra.model.POJO.People;
-import com.example.nicolas.ejercicioextra.model.POJO.PeopleContainer;
+import com.example.nicolas.ejercicioextra.model.POJO.Planet;
 import com.example.nicolas.ejercicioextra.util.ResultListener;
+import com.example.nicolas.ejercicioextra.util.ResultPlanetListener;
 
 import java.util.List;
 
@@ -52,6 +54,7 @@ public class FragmentPeople extends Fragment implements AdapterPeople.ListenerAd
         recyclerView.setAdapter(adapterPeople);
 
         getUnPeople();
+         getUnPlanet();
         return view;
 
     }
@@ -80,6 +83,21 @@ public class FragmentPeople extends Fragment implements AdapterPeople.ListenerAd
                 for(People people: result)
 
                 adapterPeople.agregarPeople(people);
+            }
+        });
+    }
+
+    public void getUnPlanet(){
+        PlanetsController planetsController = new PlanetsController();
+        planetsController.getPlanet(new ResultPlanetListener<List<Planet>>() {
+
+
+            @Override
+            public void finish(List<Planet> result) {
+
+                for(Planet planet : result)
+
+                    adapterPeople.agregarPlanets(planet);
             }
         });
     }

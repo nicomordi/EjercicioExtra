@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.nicolas.ejercicioextra.R;
 import com.example.nicolas.ejercicioextra.model.POJO.People;
+import com.example.nicolas.ejercicioextra.model.POJO.Planet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +17,12 @@ import java.util.List;
 public class AdapterPeople  extends RecyclerView.Adapter<AdapterPeople.PeopleViewHolder> {
 
     private List<People> peopleList;
+    private List<Planet> planetList;
     private ListenerAdapterPeople listener;
 
     public AdapterPeople(ListenerAdapterPeople listener) {
         this.peopleList = new ArrayList<>();
+        this.planetList =new ArrayList<>();
         this.listener = listener;
     }
 
@@ -48,19 +51,27 @@ public class AdapterPeople  extends RecyclerView.Adapter<AdapterPeople.PeopleVie
         notifyDataSetChanged();
     }
 
+    public void agregarPlanets(Planet planet)
+    {
+        planetList.add(0, planet);
+        notifyDataSetChanged();
+    }
+
     //Pone los datos con la imagen
     @Override
     public void onBindViewHolder(@NonNull PeopleViewHolder holder, int position) {
        holder.bindPeople(peopleList.get(position));
+
     }
 
     @Override
     public int getItemCount() {
-        if(peopleList != null) {
+    /*    if(peopleList != null) {
             return peopleList.size();
         } else {
             return 0;
-        }
+        }*/
+        return peopleList.size();
     }
 
 
@@ -97,12 +108,18 @@ public class AdapterPeople  extends RecyclerView.Adapter<AdapterPeople.PeopleVie
         public void bindPeople(People people) {
 //
             nombrePeople.setText(people.getName());
-            homeworldPeople.setText(people.getHomeWorldUrl());
+            //homeworldPeople.setText(people.getHomeWorldUrl());
 
         }
 
+        public void bindPlanet(Planet planet)
+        {
+            homeworldPeople.setText(planet.getName());
+        }
 
     }
+
+
 
 
 
